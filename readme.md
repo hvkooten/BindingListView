@@ -1,3 +1,14 @@
+*This fork is only for migration to .Net 5*
+
+*I've changed only BindingListView project without satellite projects. Sorry about that.*
+
+*If anyone needs NuGet package, pleese, open an issue and I will try to do it.*
+
+*- Sapr9x3*
+
+
+----
+
 *This repository was forked from [sourceforge.net/p/blw](http://sourceforge.net/p/blw/) and the readme below was copied from [blw.sourceforge.net](http://blw.sourceforge.net/)*
 
 # BindingListView
