@@ -1,4 +1,5 @@
-Imports Equin.ApplicationFramework
+Imports System.Data
+Imports NodorumSolutio.ApplicationFramework
 
 Module Module1
 

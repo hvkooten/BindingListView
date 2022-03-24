@@ -1,12 +1,23 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>    
-    <TargetFramework>net5.0-windows</TargetFramework>
-    <UseWindowsForms>true</UseWindowsForms>
+  <PropertyGroup>
+    <UseWindowsForms>True</UseWindowsForms>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
     
-    <RootNamespace>Equin.ApplicationFramework</RootNamespace>
-    <AssemblyName>Equin.ApplicationFramework.BindingListView</AssemblyName>
+    <RootNamespace>NodorumSolutio.ApplicationFramework</RootNamespace>
+    <AssemblyName>NodorumSolutio.BindingListView</AssemblyName>
+    <TargetFrameworks>net6.0-windows</TargetFrameworks>
+    <Company>Nodorum Solutio BV</Company>
+    <Authors>$(Company)</Authors>
+    <Copyright>© Nodorum Solutio BV 2022</Copyright>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net6.0-windows|AnyCPU'">
+    <Prefer32Bit>False</Prefer32Bit>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net6.0-windows|AnyCPU'">
+    <Prefer32Bit>False</Prefer32Bit>
   </PropertyGroup>
 
   <ItemGroup>
@@ -20,5 +31,4 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
   </ItemGroup>    
-  
 </Project>

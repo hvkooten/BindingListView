@@ -1,11 +1,6 @@
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Text;
 using System.Windows.Forms;
-using Equin.ApplicationFramework;
+using NodorumSolutio.ApplicationFramework;
 
 namespace Demo
 {
@@ -27,8 +22,10 @@ namespace Demo
         private void LoadFeeds()
         {
             string[] urls = { 
-                "http://newsrss.bbc.co.uk/rss/newsonline_uk_edition/front_page/rss.xml", 
-                "http://channel9.msdn.com/rss.aspx",
+                "http://newsrss.bbc.co.uk/rss/newsonline_uk_edition/front_page/rss.xml",
+                "https://blogs.microsoft.com/feed/",
+                "https://news.microsoft.com/feed/",
+                "https://azure.microsoft.com/en-us/blog/feed/",
             };
             
             foreach (string url in urls)

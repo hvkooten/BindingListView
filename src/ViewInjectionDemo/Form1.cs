@@ -6,7 +6,7 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 
-namespace Equin.ApplicationFramework.Demos.ViewInjectionDemo
+namespace NodorumSolutio.ApplicationFramework.Demos.ViewInjectionDemo
 {
     public partial class Form1 : Form
     {

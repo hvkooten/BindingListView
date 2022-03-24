@@ -1,6 +1,3 @@
-using System;
-using System.Reflection;
-using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
 // General Information about an assembly is controlled through the following 
@@ -9,9 +6,9 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("BindingListView")]
 [assembly: AssemblyDescription("Advanced, data bindable, object list view.")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Equin")]
+[assembly: AssemblyCompany("Nodorum Solutio")]
 [assembly: AssemblyProduct("BindingListView")]
-[assembly: AssemblyCopyright("Copyright © Andrew Davey 2005")]
+[assembly: AssemblyCopyright("Copyright © Nodorum Solutio 2022")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

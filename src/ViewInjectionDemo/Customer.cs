@@ -2,7 +2,7 @@ using System;
 using System.ComponentModel;
 using System.Collections.Generic;
 
-namespace Equin.ApplicationFramework.Demos.ViewInjectionDemo
+namespace NodorumSolutio.ApplicationFramework.Demos.ViewInjectionDemo
 {
     class Customer
     {

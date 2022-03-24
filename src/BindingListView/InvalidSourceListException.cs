@@ -1,28 +1,23 @@
-using System;
-using System.Collections.Generic;
-using System.Text;
+namespace NodorumSolutio.ApplicationFramework;
 
-namespace Equin.ApplicationFramework
+[Serializable]
+public class InvalidSourceListException : Exception
 {
-    [Serializable]
-    public class InvalidSourceListException : Exception
+    public InvalidSourceListException()
+        : base(Properties.Resources.InvalidSourceList)
     {
-        public InvalidSourceListException()
-            : base(Properties.Resources.InvalidSourceList)
-        {
-            
-        }
 
-        public InvalidSourceListException(string message)
-            : base(message)
-        {
+    }
 
-        }
+    public InvalidSourceListException(string message)
+        : base(message)
+    {
 
-        public InvalidSourceListException(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context)
-            : base(info, context)
-        {
+    }
 
-        }
+    public InvalidSourceListException(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context)
+        : base(info, context)
+    {
+
     }
 }

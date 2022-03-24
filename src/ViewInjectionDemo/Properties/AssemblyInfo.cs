@@ -8,9 +8,9 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("ViewInjectionDemo")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Equin")]
+[assembly: AssemblyCompany("Nodorum Solutio BV")]
 [assembly: AssemblyProduct("ViewInjectionDemo")]
-[assembly: AssemblyCopyright("Copyright © Equin 2006")]
+[assembly: AssemblyCopyright("Copyright © Nodorum Solutio BV 2022")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

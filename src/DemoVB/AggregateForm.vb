@@ -1,4 +1,5 @@
-Imports Equin.ApplicationFramework
+Imports System.Windows.Forms
+Imports NodorumSolutio.ApplicationFramework
 
 Public Class AggregateForm
     Private itemsView As AggregateBindingListView(Of Item)

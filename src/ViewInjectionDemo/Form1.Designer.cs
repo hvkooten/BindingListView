@@ -1,4 +1,4 @@
-namespace Equin.ApplicationFramework.Demos.ViewInjectionDemo
+namespace NodorumSolutio.ApplicationFramework.Demos.ViewInjectionDemo
 {
     partial class Form1
     {
@@ -67,7 +67,7 @@ namespace Equin.ApplicationFramework.Demos.ViewInjectionDemo
             // 
             // customerBindingSource
             // 
-            this.customerBindingSource.DataSource = typeof(Equin.ApplicationFramework.Demos.ViewInjectionDemo.Customer);
+            this.customerBindingSource.DataSource = typeof(NodorumSolutio.ApplicationFramework.Demos.ViewInjectionDemo.Customer);
             // 
             // dataGridView1
             // 

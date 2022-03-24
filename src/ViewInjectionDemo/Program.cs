@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
 
-namespace Equin.ApplicationFramework.Demos.ViewInjectionDemo
+namespace NodorumSolutio.ApplicationFramework.Demos.ViewInjectionDemo
 {
     static class Program
     {

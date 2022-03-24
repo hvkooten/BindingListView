@@ -1,4 +1,4 @@
-Imports Equin.ApplicationFramework
+Imports NodorumSolutio.ApplicationFramework
 
 Public Class SimpleForm
     Private itemsView As BindingListView(Of Item)

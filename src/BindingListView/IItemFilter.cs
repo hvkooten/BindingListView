@@ -1,9 +1,5 @@
-using System;
-using System.Collections.Generic;
-using System.Text;
+namespace NodorumSolutio.ApplicationFramework;
 
-namespace Equin.ApplicationFramework
-{
     /// <summary>
     /// Defines a general method to test it an item should be included in a <see cref="BindingListView&lt;T&gt;"/>.
     /// </summary>
@@ -58,86 +54,85 @@ namespace Equin.ApplicationFramework
         #endregion
     }
 
+/// <summary>
+/// A filter that uses a user-defined <see cref="Predicate&lt;T&gt;"/> to test items for inclusion in <see cref="BindingListView&lt;T&gt;"/>.
+/// </summary>
+public class PredicateItemFilter<T> : IItemFilter<T>
+{
     /// <summary>
-    /// A filter that uses a user-defined <see cref="Predicate&lt;T&gt;"/> to test items for inclusion in <see cref="BindingListView&lt;T&gt;"/>.
+    /// Creates a new <see cref="PredicateItemFilter&lt;T&gt;"/> that uses the specified <see cref="Predicate&lt;T&gt;"/> and default name.
     /// </summary>
-    public class PredicateItemFilter<T> : IItemFilter<T>
+    /// <param name="includeDelegate">The <see cref="Predicate&lt;T&gt;"/> used to test items.</param>
+    public PredicateItemFilter(Predicate<T> includeDelegate)
+        : this(includeDelegate, null)
     {
-        /// <summary>
-        /// Creates a new <see cref="PredicateItemFilter&lt;T&gt;"/> that uses the specified <see cref="Predicate&lt;T&gt;"/> and default name.
-        /// </summary>
-        /// <param name="includeDelegate">The <see cref="Predicate&lt;T&gt;"/> used to test items.</param>
-        public PredicateItemFilter(Predicate<T> includeDelegate)
-            : this(includeDelegate, null)
+        // The other constructor is called to do the work.
+    }
+
+    /// <summary>
+    /// Creates a new <see cref="PredicateItemFilter&lt;T&gt;"/> that uses the specified <see cref="Predicate&lt;T&gt;"/>.
+    /// </summary>
+    /// <param name="includeDelegate">The <see cref="PredicateItemFilter&lt;T&gt;"/> used to test items.</param>
+    /// <param name="name">The name used for the ToString() return value.</param>
+    public PredicateItemFilter(Predicate<T> includeDelegate, string name)
+    {
+        // We don't allow a null string. Use the default instead.
+        _name = name ?? defaultName;
+        if (includeDelegate != null)
         {
-            // The other constructor is called to do the work.
+            _includeDelegate = includeDelegate;
         }
-
-        /// <summary>
-        /// Creates a new <see cref="PredicateItemFilter&lt;T&gt;"/> that uses the specified <see cref="Predicate&lt;T&gt;"/>.
-        /// </summary>
-        /// <param name="includeDelegate">The <see cref="PredicateItemFilter&lt;T&gt;"/> used to test items.</param>
-        /// <param name="name">The name used for the ToString() return value.</param>
-        public PredicateItemFilter(Predicate<T> includeDelegate, string name)
+        else
         {
-            // We don't allow a null string. Use the default instead.
-            _name = name ?? defaultName;
-            if (includeDelegate != null)
-            {
-                _includeDelegate = includeDelegate;
-            }
-            else
-            {
-                throw new ArgumentNullException("includeDelegate", Properties.Resources.IncludeDelegateCannotBeNull);
-            }
-        }
-
-        private Predicate<T> _includeDelegate;
-        private string _name;
-        private readonly string defaultName = Properties.Resources.PredicateFilter;
-
-        public bool Include(T item)
-        {
-            return _includeDelegate(item);
-        }
-
-        public override string ToString()
-        {
-            return _name;
+            throw new ArgumentNullException("includeDelegate", Properties.Resources.IncludeDelegateCannotBeNull);
         }
     }
 
-    // TODO: Implement this class
-    /*
-    public class ExpressionItemFilter<T> : IItemFilter<T>
+    private Predicate<T> _includeDelegate;
+    private string _name;
+    private readonly string defaultName = Properties.Resources.PredicateFilter;
+
+    public bool Include(T item)
     {
-        public ExpressionItemFilter(string expression)
-        {
-            // TODO: Parse expression into predicate
-        }
-
-        public bool Include(T item)
-        {
-            // TODO: use expression...
-            return true;
-        }
+        return _includeDelegate(item);
     }
-    */
 
-    // TODO: Implement this class
-    /*
-    public class CSharpItemFilter<T> : IItemFilter<T>
+    public override string ToString()
     {
-        public CSharpItemFilter(string filterSourceCode)
-        {
-            
-        }
-
-        public bool Include(T item)
-        {
-            // TODO: implement this method...
-            return true;
-        }
+        return _name;
     }
-    */
 }
+
+// TODO: Implement this class
+/*
+public class ExpressionItemFilter<T> : IItemFilter<T>
+{
+    public ExpressionItemFilter(string expression)
+    {
+        // TODO: Parse expression into predicate
+    }
+
+    public bool Include(T item)
+    {
+        // TODO: use expression...
+        return true;
+    }
+}
+*/
+
+// TODO: Implement this class
+/*
+public class CSharpItemFilter<T> : IItemFilter<T>
+{
+    public CSharpItemFilter(string filterSourceCode)
+    {
+            
+    }
+
+    public bool Include(T item)
+    {
+        // TODO: implement this method...
+        return true;
+    }
+}
+*/

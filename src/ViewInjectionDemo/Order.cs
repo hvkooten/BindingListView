@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace Equin.ApplicationFramework.Demos.ViewInjectionDemo
+namespace NodorumSolutio.ApplicationFramework.Demos.ViewInjectionDemo
 {
     class Order
     {
